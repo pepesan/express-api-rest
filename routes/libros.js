@@ -36,9 +36,9 @@ router.post('/', function(req, res, next) {
   res.json(libro);
 });
 /* Get /:isbn devolver el libro que le indico con isbn */
-router.get('/:isbn', function(req, res, next) {
+router.get('/:id', function(req, res, next) {
   // recoger el parámetro por url
-  var isbn=req.params.isbn;
+  var isbn=req.params.id;
   //console.log(isbn);
   //consultar a la bbdd para buscar el libro con ese isbn
   var libro={
@@ -51,7 +51,7 @@ router.get('/:isbn', function(req, res, next) {
 /* POST/PUT /:id modificar el libro con id */
 router.put('/:id', function(req, res, next) {
   // recoger el parámetro por url
-  var isbn=req.params.isbn;
+  var isbn=req.params.id;
   //Recoger los datos del libro
   // Datos dentro del body
   console.log(req.body);
@@ -63,7 +63,7 @@ router.put('/:id', function(req, res, next) {
 /* Get/Detele /:id/delete borrar el libro que le indico con id */
 router.delete('/:id', function(req, res, next) {
   // recoger el parámetro por url
-  var isbn=req.params.isbn;
+  var isbn=req.params.id;
   // borrar el libro de la bbdd
   var libro={
     "autor": "Terry Pratchett",

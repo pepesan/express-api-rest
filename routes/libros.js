@@ -120,6 +120,7 @@ router.put('/:id', function(req, res, next) {
   });
   //devolver el libro modificado
   //res.json(libro);
+  res.end();
 });
 /* Get/Detele /:id/delete borrar el libro que le indico con id */
 router.delete('/:id', function(req, res, next) {
@@ -145,6 +146,7 @@ router.delete('/:id', function(req, res, next) {
   res.json(libro);
 
    */
+  res.end();
 });
 
 module.exports = router;

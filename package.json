@@ -13,5 +13,8 @@
     "mongoose": "^5.4.19",
     "morgan": "~1.9.0",
     "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "swagger-ui-express": "^4.0.2"
   }
 }

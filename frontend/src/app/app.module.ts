@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
@@ -22,6 +23,7 @@ import { AddLibrosComponent } from './components/libros/add-libros/add-libros.co
 import { DetailLibrosComponent } from './components/libros/detail-libros/detail-libros.component';
 import { EditLibrosComponent } from './components/libros/edit-libros/edit-libros.component';
 import { ConfirmDeleteLibrosComponent } from './components/libros/confirm-delete-libros/confirm-delete-libros.component';
+import { UploadFormComponent } from './components/upload-form/upload-form.component';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { ConfirmDeleteLibrosComponent } from './components/libros/confirm-delete
     AddLibrosComponent,
     DetailLibrosComponent,
     EditLibrosComponent,
-    ConfirmDeleteLibrosComponent
+    ConfirmDeleteLibrosComponent,
+    UploadFormComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { ConfirmDeleteLibrosComponent } from './components/libros/confirm-delete
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AngularImportsModule
+    AngularImportsModule,
+    ReactiveFormsModule
   ],
   providers: [
     TodoService,

@@ -5,10 +5,12 @@ import {PageNotFoundComponent} from "./components/page-not-found/page-not-found.
 import {AddLibrosComponent} from "./components/libros/add-libros/add-libros.component";
 import {DetailLibrosComponent} from "./components/libros/detail-libros/detail-libros.component";
 import {EditLibrosComponent} from "./components/libros/edit-libros/edit-libros.component";
+import {UploadFormComponent} from "./components/upload-form/upload-form.component";
 
 const routes: Routes = [
   { path: '' , redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: ListLibrosComponent },
+  { path: 'upload', component: UploadFormComponent },
   { path: 'libros', component: ListLibrosComponent },
   { path: 'libros/add', component: AddLibrosComponent },
   { path: 'libros/:id', component: DetailLibrosComponent },

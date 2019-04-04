@@ -26,10 +26,11 @@ router.get('/', function(req, res, next) {
 });
 /* POST FILE. */
 router.post('/', function(req, res, next) {
+    //console.log(req);
     // TODO: pendiente comprobar tipos de ficheros
     var form = new formidable.IncomingForm();
-
     form.parse(req);
+    //console.log(form);
     var fileHash,fileExtension, filename, savedFilename;
     form.on('fileBegin', function (name, file){
         //Cálculo de hash
@@ -41,7 +42,7 @@ router.post('/', function(req, res, next) {
     });
 
     form.on('file', function (name, file){
-        console.log(file);
+        //console.log(file);
         file.urlPath='/uploads/' + savedFilename;
         new MediaDao(file).save(function(err, file, count)
         {
@@ -49,7 +50,7 @@ router.post('/', function(req, res, next) {
                 // Si sale mal
                 res.json({res:"Error",message:err});
             }else{
-                //console.log(user);
+                //console.log(file);
                 // si sale bien
                 res.json({res:"Success",file:file});
             }

@@ -12,21 +12,37 @@ import { AppComponent } from './components/app.component';
 import { TodosComponent } from './components/todos/todos.component';
 import {TodoService} from './services/todo.service';
 // import {LibrosService} from './services/libros.service';
+import {AngularImportsModule} from './angular-imports/angular-imports.module';
 import {LibrosService} from './services/libros-api.service';
-import { ListLibroComponent } from './components/list-libro/list-libro.component';
+import { ListLibroComponent } from './components/libros/list-libro/list-libro.component';
+import { ListLibrosComponent } from './components/libros/list-libros/list-libros.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AddLibrosComponent } from './components/libros/add-libros/add-libros.component';
+import { DetailLibrosComponent } from './components/libros/detail-libros/detail-libros.component';
+import { EditLibrosComponent } from './components/libros/edit-libros/edit-libros.component';
+import { ConfirmDeleteLibrosComponent } from './components/libros/confirm-delete-libros/confirm-delete-libros.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
-    ListLibroComponent
+    ListLibroComponent,
+    ListLibrosComponent,
+    PageNotFoundComponent,
+    AddLibrosComponent,
+    DetailLibrosComponent,
+    EditLibrosComponent,
+    ConfirmDeleteLibrosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AngularImportsModule
   ],
   providers: [
     TodoService,

@@ -60,4 +60,37 @@ export class LibrosService {
       return [];
     };
   }
+
+  addLibro(modelo: Libro) {
+    return this.httpClient
+        .post<Observable<any>>(this.url,modelo)
+        .pipe(
+            retry(3),
+            catchError(
+                this.handleError('get', [])
+            )
+        );
+  }
+
+  getLibroByID(id: any) {
+    return this.httpClient
+        .get<Observable<any>>(this.url + '/' + id)
+        .pipe(
+            retry(3),
+            catchError(
+                this.handleError('delete', [])
+            )
+        );
+  }
+
+  editLibro(id: any, modelo: Libro) {
+    return this.httpClient
+        .put<Observable<any>>(this.url + '/' + id,modelo)
+        .pipe(
+            retry(3),
+            catchError(
+                this.handleError('delete', [])
+            )
+        );
+  }
 }

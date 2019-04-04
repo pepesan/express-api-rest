@@ -12,8 +12,16 @@
 
 
 export class Libro {
-    _id?: string;
-    titulo?: string;
-    autor?: string;
-    isbn?: string;
+    constructor(
+        public _id?: string,
+        public titulo?: string,
+        public autor?: string,
+        public isbn?: string,
+    )
+    {
+        this.titulo="";
+        this.autor="";
+        this.isbn="";
+    }
+
 }

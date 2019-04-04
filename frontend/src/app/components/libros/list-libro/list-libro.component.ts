@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {LibrosService} from '../../services/libros-api.service';
-import {Libro} from '../../models/libro';
+import {LibrosService} from '../../../services/libros-api.service';
+import {Libro} from '../../../models/libro';
 import {Observable} from 'rxjs';
-import {GetLibrosResponse} from '../../models/getLibrosResponse';
+import {GetLibrosResponse} from '../../../models/getLibrosResponse';
 
 @Component({
   selector: 'app-list-libro',

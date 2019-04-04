@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
 var librosRouter = require('./routes/libros');
+var filesRouter = require('./routes/files');
 var swaggerUi = require('swagger-ui-express'),
     swaggerDocument = require('./openapi/swagger.json');
 
@@ -40,10 +41,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/libros', librosRouter);
+app.use('/api/files', filesRouter);
 // Ruta de Swagger UI
 app.use(
     '/api-docs',

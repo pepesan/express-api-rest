@@ -1,5 +1,6 @@
 .idea
 backend/modules
+backend/uploads/*
 frontend/dist/nombreproyecto
 frontend/node_modules
 mochawesome-report

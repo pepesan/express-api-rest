@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
         error:err
       });
     }else{
-      console.log(libros);
+      // console.log(libros);
       res.json({
         res:"Success",
         libros: libros

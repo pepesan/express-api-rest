@@ -3,9 +3,12 @@ var mongoose= require('./conection');
 const Media = mongoose.model(
     'Media',
     {
-        isbn: String,
-        titulo:String,
-        autor:String
+        name: String,
+        path:String,
+        type:String,
+        size: Number,
+        mtime: Date,
+        urlPath: String
     }
 );
 
